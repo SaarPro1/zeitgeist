@@ -1,0 +1,102 @@
+body { 
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+.container {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+p.subtitle {
+    margin-top: 0;
+    color: #555;
+    margin-bottom: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    background-color: #eaf1f1; 
+}
+th, td {
+    border: 1px solid #555;
+    padding: 5px;
+    text-align: left;
+    vertical-align: middle;
+}
+.header-table td {
+    text-align: center;
+    font-size: 0.9em;
+}
+.logo-cell {
+    text-align: left !important;
+    vertical-align: top;
+    padding: 10px;
+    width: 33%;
+}
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #888;
+    letter-spacing: 2px;
+}
+.logo span {
+    color: #d32f2f;
+}
+.logo-sub {
+    color: #d32f2f;
+    font-size: 14px;
+    font-weight: bold;
+}
+input[type="text"], input[type="date"], input[type="time"], input[type="number"] {
+    width: 95%;
+    padding: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+input[type="checkbox"] {
+    transform: scale(1.2);
+}
+.center {
+    text-align: center;
+}
+.footer-text {
+    font-size: 11px;
+    color: #333;
+    line-height: 1.4;
+    padding: 10px;
+}
+/* Spaltenbreiten für Haupttabelle */
+.col-tag { width: 5%; }
+.col-datum { width: 15%; }
+.col-zeit { width: 25%; }
+.col-pause { width: 10%; }
+.col-prod { width: 15%; }
+.col-schicht { width: 5%; text-align: center; }
+
+/*Styling für den Unterschrift bereich */
+.signature-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    /*abstand zur tabelle darüber*/
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+.signature-box {
+    width: 45%; /*breite der Unterschriftslinie*/
+    border-top: 1px solid #333;/*die Linie zum Unterschrieben*/
+    padding-top: 5px; /*Abstand zwischen Linie und Text*/
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+}
