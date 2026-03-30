@@ -1,7 +1,7 @@
 // Wartet, bis die HTML-Seite vollständig geladen ist 
 document.addEventListener("DOMContentLoaded", () => {
     const tbody = document.getElementById('timesheet-body');
-    const days = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'];
+    const days = ['Mo', 'Di', 'Mi', 'Do', 'Fr', ];
     let rowsHtml = '';
 
     // Wochentage generieren

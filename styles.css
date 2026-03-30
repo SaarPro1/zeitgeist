@@ -5,14 +5,15 @@ body {
 }
 .container {
     background-color: white;
-    padding: 20px;
+    padding: 15px;
     border: 1px solid #ccc;
-    max-width: 1000px;
+    max-width: 1920px;
+    max-height: 1080px;
     margin: 0 auto;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 h1 {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 5px;
 }
 p.subtitle {
@@ -39,21 +40,16 @@ th, td {
 .logo-cell {
     text-align: left !important;
     vertical-align: top;
-    padding: 10px;
-    width: 33%;
+    padding: 5px;
+    width: 25%;
 }
-.logo {
-    font-size: 32px;
-    font-weight: bold;
-    color: #888;
-    letter-spacing: 2px;
-}
+
 .logo span {
     color: #d32f2f;
 }
 .logo-sub {
     color: #d32f2f;
-    font-size: 14px;
+    font-size: 9px;
     font-weight: bold;
 }
 input[type="text"], input[type="date"], input[type="time"], input[type="number"] {
@@ -78,7 +74,7 @@ input[type="checkbox"] {
 /* Spaltenbreiten für Haupttabelle */
 .col-tag { width: 5%; }
 .col-datum { width: 15%; }
-.col-zeit { width: 25%; }
+.col-zeit { width: 27%; }
 .col-pause { width: 10%; }
 .col-prod { width: 15%; }
 .col-schicht { width: 5%; text-align: center; }
@@ -87,9 +83,9 @@ input[type="checkbox"] {
 .signature-section {
     display: flex;
     justify-content: space-between;
-    margin-top: 60px;
+    margin-top: 50px;
     /*abstand zur tabelle darüber*/
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     padding: 0 10px;
 }
 .signature-box {
@@ -99,4 +95,7 @@ input[type="checkbox"] {
     font-size: 14px;
     color: #333;
     text-align: left;
+}
+.company-logo {
+    font-size: 15px;
 }
