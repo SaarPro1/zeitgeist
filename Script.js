@@ -105,6 +105,8 @@ function clearAll() {
         row.querySelector('.cb1').checked = false;
         row.querySelector('.cb2').checked = false;
         row.querySelector('.cb3').checked = false;
+        row.querySelector('.from-date').value = "";
+        row.querySelector('.to-date').value = "";
     });
 
     document.getElementById('total-hours').value = "";
@@ -145,11 +147,22 @@ function exportCSV() {
 
 // ✅ SPEICHERN IN LOCALSTORAGE
 function saveData() {
+
+    // 🔹 Kopfbereich speichern
+    const headerData = {
+        kunde: document.querySelector('.kunde')?.value || '',
+        bereich: document.querySelector('.bereich')?.value || '',
+        employee: document.querySelector('.employee')?.value || '',
+        fromDate: document.querySelector('.from-date')?.value || '',
+        toDate: document.querySelector('.to-date')?.value || ''
+    };
+
+    // 🔹 Tabellenzeilen speichern
     const rows = document.querySelectorAll('.time-row');
-    let saveArray = [];
+    let rowData = [];
 
     rows.forEach(row => {
-        saveArray.push({
+        rowData.push({
             date: row.querySelector('.date').value,
             start: row.querySelector('.time-start').value,
             end: row.querySelector('.time-end').value,
@@ -160,9 +173,12 @@ function saveData() {
         });
     });
 
-    localStorage.setItem("timesheetData", JSON.stringify(saveArray));
+    // 🔹 Alles zusammen speichern
+    localStorage.setItem("timesheetData", JSON.stringify({
+        header: headerData,
+        rows: rowData
+    }));
 }
-
 
 // ✅ LADEN AUS LOCALSTORAGE
 function loadData() {
@@ -170,9 +186,20 @@ function loadData() {
     if (!saved) return;
 
     const data = JSON.parse(saved);
+
+    // 🔹 Kopfbereich laden
+    if (data.header) {
+        document.querySelector('.kunde').value = data.header.kunde || '';
+        document.querySelector('.bereich').value = data.header.bereich || '';
+        document.querySelector('.employee').value = data.header.employee || '';
+        document.querySelector('.from-date').value = data.header.fromDate || '';
+        document.querySelector('.to-date').value = data.header.toDate || '';
+    }
+
+    // 🔹 Tabellenzeilen laden
     const rows = document.querySelectorAll('.time-row');
 
-    data.forEach((rowData, i) => {
+    data.rows?.forEach((rowData, i) => {
         const row = rows[i];
         if (!row) return;
 

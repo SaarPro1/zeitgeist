@@ -32,22 +32,23 @@
 
     <table>
         <tr>
-            <td colspan="4"><strong>Kunde:</strong> <input type="text" style="width: 80%;"></td>
+            <td colspan="4" ><strong>Kunde:</strong> <input type="text" class="kunde" style="width: 80%;"></td>
         </tr>
         <tr>
-            <td colspan="4"><strong>Einsatzort/-bereich:</strong> <input type="text" style="width: 70%;"></td>
+            <td colspan="4" ><strong>Einsatzort/-bereich:</strong> <input type="text" class="bereich" style="width: 70%;"></td>
         </tr>
         <tr>
-            <td colspan="4"><strong>Name, Vorname:</strong> <input type="text" style="width: 75%;"></td>
+            <td colspan="4" ><strong>Name, Vorname:</strong> <input type="text" class="employee" style="width: 75%;"></td>
         </tr>
         <tr>
-            <td colspan="4"><strong>Stundennachweis für die Zeit vom</strong> <input type="date" style="width: 150px;"> <strong>bis</strong> <input type="date" style="width: 150px;"></td>
+            <td colspan="4"><strong>Stundennachweis für die Zeit vom</strong> <input type="date" class="from-date" style="width: 150px;"> <strong>bis</strong> <input type="date" class="to-date" style="width: 150px;"></td>
         </tr>
     </table>
-
-    <table id="timesheet">
+<div class="table-actions">
         <button onclick="clearAll()">Alles löschen</button>
         <button onclick="exportCSV()">Exportieren (CSV)</button>
+</div>
+    <table id="timesheet">
         <thead>
             <tr>
                 <th class="col-tag" rowspan="2">Tag</th>
